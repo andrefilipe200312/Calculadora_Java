@@ -20,7 +20,7 @@ public class CalculadoraProjeto {
                 }
                 opc = scanner.nextInt();
                 scanner.nextLine();
-                if (opc >= 0 && opc <= 4) {
+                if (opc >= 0 && opc <= 5) {
                     float float1;
                     float float2;
                     switch (opc) {
@@ -48,6 +48,12 @@ public class CalculadoraProjeto {
                             System.out.println("Resultado: " + dividir(float1, float2));
                             pause(scanner);
                         }
+                        case 5 -> {
+                            float1 = getFloat(scanner, "Num:");
+                            System.out.println("Resultado: ");
+                            mostrarTabuada(float1);
+                            pause(scanner);
+                        }
                         case 0 -> {
                         }
                         default -> System.out.println("Digite uma opção válida");
@@ -64,7 +70,7 @@ public class CalculadoraProjeto {
     }
 
      public static float somar(float num1, float num2){
-        return num1/num2;
+        return num1+num2;
     }
 
     public static float multiplicar(float num1, float num2){
@@ -78,6 +84,13 @@ public class CalculadoraProjeto {
     public static float dividir(float num1, float num2){
         return num1/num2;
     }
+    
+    public static void mostrarTabuada(float num){
+        int i;
+        for (i=1;i<=10; i++){
+            System.out.println(num + " x " + i + " = " + num*i);
+        }
+    }
 
     private static void showMenu(){
         System.out.println("------------------");
@@ -87,6 +100,7 @@ public class CalculadoraProjeto {
         System.out.println("[2] Subtrair");
         System.out.println("[3] Multiplicar");
         System.out.println("[4] Dividir");
+        System.out.println("[5] Mostrar Tabuada");
         System.out.println("[0] Sair");
         System.out.println("------------------");
 

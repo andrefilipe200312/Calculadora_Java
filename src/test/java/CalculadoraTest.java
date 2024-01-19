@@ -11,7 +11,7 @@ public class CalculadoraTest {
     
     @Test
     public void testSomar() {
-        assertEquals(1.4f, CalculadoraProjeto.somar(0.7f, 0.7f), 0.5);
+        assertEquals(1.4f, CalculadoraProjeto.somar(0.7f, 0.7f));
     }
 
     @Test
